@@ -1,4 +1,5 @@
 import Dashboard from "@/components/Dashboard";
+import Login from "@/components/Login";
 import Main from "@/components/Main";
 
 export const metadata = {
@@ -11,8 +12,14 @@ const DashboardPage = () => {
     const isAunthenticated = false;
 
     const children = (
-        <Dashboard/>
+        <Login/>
     )
+
+    if(isAunthenticated){
+        children = (
+            <Dashboard/>
+        )
+    }
 
     return(
         <Main>
